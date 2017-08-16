@@ -7,5 +7,6 @@ ENV PROXY_ADDR localhost:80
 ADD caddy caddy
 ADD Caddyfile Caddyfile
 
+EXPOSE 80
 EXPOSE 443
 ENTRYPOINT ["/caddy"]
