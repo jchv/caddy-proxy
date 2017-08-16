@@ -1,7 +1,9 @@
 https://{$DOMAIN}:443 {
+  bind 0.0.0.0
   proxy / {$PROXY_ADDR}
 }
 
 http://{$DOMAIN}:80 {
+  bind 0.0.0.0
   redir https://{host}{uri}
 }
