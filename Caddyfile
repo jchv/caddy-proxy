@@ -1,2 +1,7 @@
-https://{$DOMAIN}:443
-proxy / {$PROXY_ADDR}
+https://{$DOMAIN}:443 {
+  proxy / {$PROXY_ADDR}
+}
+
+http://{$DOMAIN}:80 {
+  redir https://{host}{uri}
+}
